@@ -20,7 +20,7 @@ function calcABV(){
    //ABV = (OG - FG) * 131.25
    let abv = ((ig -fg) * 131.25);
    
-   document.getElementById("ABVResult").value = abv.toFixed(2) + " %";
+   document.getElementById("ABVResult").value = `Alcohol Content = ${abv.toFixed(2)} %`;
 };
 //Reset Text Areas in ABV Calculator:
 function resetABV(){
