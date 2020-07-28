@@ -1,4 +1,5 @@
 
+//Fetch Data from punkAPI
 
 async function getData(){
     await fetch('https://api.punkapi.com/v2/beers')
@@ -8,6 +9,9 @@ async function getData(){
     }
     
     getData();
+
+ //Calculators Section
+
 //Calculate Alcohol Content based on Inital and Final Gravity:
 
 function calcABV(){
@@ -15,7 +19,7 @@ function calcABV(){
    let fg = parseFloat(document.getElementById("finalGravity").value);
    //ABV = (OG - FG) * 131.25
    let abv = ((ig -fg) * 131.25);
-   document.getElementById("ABVResult").placeholder = "hello";
+   
    document.getElementById("ABVResult").value = abv.toFixed(2) + " %";
 };
 //Reset Text Areas in ABV Calculator:
