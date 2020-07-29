@@ -11,7 +11,10 @@ async function getData(){
     getData();
 
  //Calculators Section
-
+ document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
+  });
 //Calculate Alcohol Content based on Inital and Final Gravity:
 
 function calcABV(){
