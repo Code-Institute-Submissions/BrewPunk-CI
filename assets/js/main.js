@@ -29,13 +29,16 @@ async function getDataABV(){
        
     }
     
+///////////////////////////////
+////Calculators Section //////
+//////////////////////////////
 
- //Calculators Section
+// initialise sliders
  document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems, {});
   });
-//Calculate Alcohol Content based on Inital and Final Gravity:
+//Calculate [ABV] Alcohol Content based on Inital and Final Gravity:
 
 function calcABV(){
    let ig =  parseFloat(document.getElementById("initialGravity").value);
@@ -53,3 +56,6 @@ function resetABV(){
     alert('ABV Calculator Reset');
 
 }
+
+// Priming Sugar Calculation
+
