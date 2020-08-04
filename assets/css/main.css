@@ -4,6 +4,7 @@
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 5px;
+    margin-bottom: 5px;
 }
 
 .beer-card {
@@ -45,3 +46,9 @@ input[type=range] + .thumb.active .value {
     margin-top: 2px;
     font-size: 12px;
 }
+
+@media only screen and (max-width: 880px) {
+    #banner-text {
+      font-size: 1.2em;
+    }
+  }
