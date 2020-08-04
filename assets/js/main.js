@@ -5,6 +5,7 @@
 //Set Button values based on slider
 document.getElementById("abv-slider-value").innerHTML = ABVValue;
 document.getElementById("ibu-slider-value").innerHTML = IBUValue;
+document.getElementById("abvibu-slider-value").innerHTML = `ABV > ${ABVValue}% + IBU > ${IBUValue}`;
 
 
 function updateABVButton() {
@@ -16,27 +17,37 @@ function updateIBUButton() {
   let IBUValue = document.getElementById("IBUSlider").value;
   document.getElementById("ibu-slider-value").innerHTML =  IBUValue;
 }
+
+function updateABVIBUButton() {
+  let ABVValue = document.getElementById("ABVSlider").value;
+  let IBUValue = document.getElementById("IBUSlider").value;
+  document.getElementById("abvibu-slider-value").innerHTML = `ABV > ${ABVValue}% + IBU > ${IBUValue}`;
+}
 //Fetch Data from punkAPI
 
-async function getDataABV(){
+//async function getDataABV(){
 
-  console.log(ABVValue);
-  console.log(typeof(IBUValue));
+//  console.log(ABVValue);
+//  console.log(typeof(IBUValue));
  // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
-    await fetch(`https://api.punkapi.com/v2/beers?` + `abv_gt=${ABVValue}`+ `&per_page=80`)
-      .then(response => response.json())
-      .then(data => console.log(data));
+ //   await fetch(`https://api.punkapi.com/v2/beers?` + `abv_gt=${ABVValue}`+ `&per_page=80`)
+ //     .then(response => response.json())
+  //    .then(data => console.log(data));
        
-    }
+ //   }
     
 ///////////////////////////////
 ////Calculators Section //////
 //////////////////////////////
 
-// initialise sliders
+// initialise selector
  document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems, {});
+  });
+
+  $(document).ready(function(){
+    $('select').formSelect();
   });
 //Calculate [ABV] Alcohol Content based on Inital and Final Gravity:
 

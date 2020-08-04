@@ -69,27 +69,27 @@
     <form action="getBeers()">
         <h2 class='center'>ABV %</h2>
         <p class="range-field">
-          <input type="range" id="ABVSlider" min="0" max="20" onchange="updateABVButton()" />
+          <input type="range" id="ABVSlider" min="0" max="20" step="0.5" value="2" onchange="updateABVButton(),updateABVIBUButton()" />
         </p>
         <h2 class='center'>IBU</h2>
         <p class="range-field">
-          <input type="range" id="IBUSlider" min="0" max="200" onchange="updateIBUButton()"/>
+          <input type="range" id="IBUSlider" min="0" max="200" step="5" value="35" onchange="updateIBUButton(),updateABVIBUButton()"/>
         </p>
       </form>
     <div class="row">
         <div class="col s12 m4">
           <div class="row center">
-            <a href="#" id="getRecipesABV-button" class="btn-large waves-effect waves-light amber darken-1" onclick="getDataABV()">Get Recipes ABV > <span id="abv-slider-value"></span> %</a>
+            <a href="#root" id="getRecipesABV-button" class="btn-large waves-effect waves-light amber darken-1" onclick="getABV()">Get Recipes: ABV > <span id="abv-slider-value"></span> %</a>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="row center">
-            <a href="#" id="getRecipesIBU-button" class="btn-large waves-effect waves-light deep-orange darken-1" onclick="getDataIBU()">Get Recipes IBU > <span id="ibu-slider-value"></span></a>
+            <a href="#root" id="getRecipesIBU-button" class="btn-large waves-effect waves-light deep-orange darken-1" onclick="getIBU()">Get Recipes: IBU > <span id="ibu-slider-value"></span></a>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="row center">
-            <a href="#" id="getRecipesABVIBU-button" class="btn-large waves-effect waves-light teal darken-1" onclick="getDataABVIBU()">Get Recipes ABV > <span id="abvibu-slider-value"></span> %</a>
+            <a href="#root" id="getRecipesABVIBU-button" class="btn-large waves-effect waves-light teal darken-1" onclick="getABVIBU()">Get Recipes: <span id="abvibu-slider-value"></span> %</a>
           </div>
         </div>
       </div>
@@ -131,81 +131,24 @@
     <div class="section">
        
         <!--   Card Section   -->
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light materialboxed">
-                  <img class="activator beer-photo materialboxed" src="https://images.punkapi.com/v2/2.png">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator black-text text-darken-4">'Buzz' <i class="material-icons right">more_vert</i></span>
-                  <h2 class="deep-orange-text">ABV 5%</h2>
-                  <p>A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.</p>
-                  <h4 class="deep-orange-text center">"A  Real Bitter Experience"</h4>
-                  <h5>Tips from the Brewer</h5>
-                  <p>The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.</p>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Buzz<i class="material-icons right">close</i></span>
-                  <h5>Ingredients</h5>
-                  <p>Malt 1 </p>
-                  <p>Malt 2 </p>
-                  <p>Malt 3 </p>
-                </div>
-            </div>
-          </div>
-  
-          <div class="col s12 m6">
-            <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator beer-photo" src="https://images.punkapi.com/v2/2.png">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator black-text text-darken-4">Buzz<i class="material-icons right">more_vert</i></span>
-                  <h2>ABV 5%</h2>
-                  <p>A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.</p>
-                  <h4 class="center">"A  Real Bitter Experience"</h4>
-                  <h5>Tips from the Brewer</h5>
-                  <p>The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.</p>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Buzz<i class="material-icons right">close</i></span>
-                  <h5>Ingredients</h5>
-                  <p>Malt 1 </p>
-                  <p>Malt 2 </p>
-                  <p>Malt 3 </p>
-                </div>
-            </div>
-          </div>
-  
-          <div class="col s12 m6">
-            <div class="card hoverable">
-                <div class="card-image waves-effect waves-block waves-light">
-                  <img class="activator beer-photo" src="https://images.punkapi.com/v2/2.png">
-                </div>
-                <div class="card-content">
-                  <span class="card-title activator black-text text-darken-4">Buzz<i class="material-icons right">more_vert</i></span>
-                  <h2>ABV 5%</h2>
-                  <p>A light, crisp and bitter IPA brewed with English and American hops. A small batch brewed only once.</p>
-                  <h4 class="center">"A  Real Bitter Experience"</h4>
-                  <h5>Tips from the Brewer</h5>
-                  <p>The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.</p>
-
-                </div>
-                <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">Buzz<i class="material-icons right">close</i></span>
-                  <h5>Ingredients</h5>
-                  <p>Malt 1 </p>
-                  <p>Malt 2 </p>
-                  <p>Malt 3 </p>
-                </div>
-            </div>
-          </div>
-  
+      <div class="container">
+        <div class="input-field col s12">
+          <select>
+          <option value="" disabled selected>Choose your option</option>
+          <span id="myMenu"> <option value="1">Option 1</option></span>
+      
+          </select>
+        <label>Beer Select</label>
+        </div>
       </div>
-      <div class="row" id="beer-cards">
+      <div class="row">
+        <h1 class="center">Your Random Beer Recipe!</h1>
+         <div id="random" class="col s12 m12 offset-m3">
+          <h1 class="center">Your Random Beer Recipe!</h1>
+
+         </div>
+      </div>
+      <div id="root">
         <!-- Card display section generated by User  Request-->
       </div>
     </div>
@@ -304,6 +247,7 @@
   <script src="assets/js/nouislider.js"></script>
   <!--Main JS file-->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/punkapi.js"></script>
   <!--FAB Script -->
   <script> 
   document.addEventListener('DOMContentLoaded', function() {
