@@ -15,9 +15,7 @@
     overflow-y: scroll;
 }
 
-.card {
-    min-height: 100%;
-}
+
 /* Card Beer  Photo*/
 .beer-photo {
     display: flex;
