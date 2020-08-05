@@ -120,9 +120,9 @@ Testing done on VSCode Using Live server.- Mobile responsiveness also tested liv
 
 4. Contact form:
     1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address type and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a the form Success page message appears. PHP not allowed on GitHub so contact form only Front end only, to implement use stated PHP code and point to PHP file.
+    2. Try to submit the empty form and verify that an error message about the required fields appears ....TODO!
+    3. Try to submit the form with an invalid email address type and verify that a relevant error appears
+    4. Try to submit the form with all inputs valid and verify that a the form Success page message appears. email is sent to my personal email address.
  
 **Media Queries**
 Media Queries Break Screens smaller than 860px:
