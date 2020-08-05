@@ -3,22 +3,26 @@ MS2. Project Code Institute - Brewdog Homebrew Recipes + Homebrew Calculators
 <img src="#" style="margin: 0;">
 
 
-Milestone 2 Project: Code Institute:
+Milestone 2 Project: Code Institute: BrewPunk-CI
 
 A Site developed for MS2 Project in Code Institute. The site consists of 3 pages. Index/Brew Calculator/Contact.
 Developed for Homebrewers using the PunkAPI to search for Brewdog Homebrew recipes based on IBU and ABV.
+Card content is revealed for Selected Homebrew recipes. Card content can be revealed by selecting the arrow on each content card to reveal the ingredients needed to make the beers generated. Alcohol % is displayed clearly along with IBU for each beer generated based on the user selection from the slider values selected. Key ingredients such as MAlts/Hops and Yeast are displayed for the homebrewer to replicate their favourite Brewdog recipes.
+
 Brewing calcuators for measuring alcohol content of your homebrew using the initial and final Gravity of your brew.
 A priming sugar calcuator based on brew volume and Temperature with recommended C02 Volumes given based on style of beer.
+
 A contact form for Contacting us using emailJS.
  
 ## UX
 
-- This project give the user a handy reference to visit Tourist Attractions safely fromt their home. They can also garner more information by going to the appropriate website. It's a one stop shop to escape and enjoy the many sights Dublin has to offer.
-- The sights are broken down into Easily readible cards and sections. The user can navigate to each section from the main page.
+- This project gives a homebrew user access to Brewdogs selection of Homebrew recipes. The user can select a desired Alcohol content or Bitterness level and fetch appropriate homebrrew recipes based on values greater than selected. Card content reveals the beer name and IBU along with Mashing details and ingredients needed to replicate the beer. Sliders are used to Generate the ABV and IBU values on the main page.
+- Brewing Calculators: -ABV - The user can use the ABV calculator that are developed for Homebrewing calculation of Alcohol % based on the initial Gravit and final Gravity of the beer. Input fields clearly marked with helper text and two buttons. One to calculate the ABV and the other to reset the fields. Number content can only be placed in the input fields. Red errors will appear if text is input in the ABV Calculator.
+- Brewing Calculators: -Priming Sugar - The user can use the Priming sugar calculator that are developed for Homebrewing calculation of Priming sugar needed for bottlling based on the initial Volume and Temperatur of the beer. Input fields clearly marked with helper text and two buttons. One to calculate the Priming Sugar and the other to reset the fields. Number content can only be placed in the input fields. Red errors will appear if text is input in the Priming Calculator
 
 - If a user is interestted in the services offered they can navigate to this via the navbar or a main button.
 There is also a contact form available so they can either suggest a feature or enquire about services.
-- In the contact form I can provide my Name, Email and select a topic and write a message and submit.
+- In the contact form the user can provide the First Name, Lastname, reply Email and write a message and send.
 
 
 Link to conceptual Wireframe:
@@ -153,11 +157,12 @@ Deployed using GitHub Pages accessed via the link below
 - Main Text Written by Dermot Murphy
 - Punk API for Generating endpoints based on DIY DOG data
 - Google Fonts for font styles; https://fonts.google.com/
+- Materialize CSS Framework
 - W3schools.com: for code used on contact form page and implementation if necessary.[W3Schools](https://www.w3schools.com/)
 
 ### Media
-- The photos used in this site were obtained  [Unsplash](https://unsplash.com/) 
-- Main Images on Recipe Cards taken from PunkAPI
+- The photos used in this site were obtained  [Unsplash](https://unsplash.com/) + [DIY DOG](https://www.brewdog.com/uk/community/diy-dog)
+- Main Images on Recipe Cards taken from PunkAPI.
 
 
 ### Acknowledgements
