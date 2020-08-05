@@ -54,8 +54,19 @@ Link to conceptual Wireframe:
     - Built with Google Materialize framework. Created and designed by Google, Material Design is a design language that combines the classic principles of successful design along with innovation and technology. Google's goal is to develop a system of design that allows for a unified user experience across all their products on any platform.
 
 - [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation as part of Bootstrap Twitter framework
+    - The project uses **JQuery** to simplify DOM manipulation as part of Bootstrap Twitter framework.
+- [PUNK APi](https://punkapi.com/documentation/v2)  Main API  used to fetch Homebrew Recipe Data from DIY DOG based on Brewdog Recipes.
+    - Root Endpoint
+    The root endpoint should prefix all resources and is only accessible over HTTPS. CORS is also enabled.
 
+    https://api.punkapi.com/v2/
+
+    - Rate Limits
+    To make sure everyone can access the API reliably, each IP that makes a request has a rate limit of 3600 requests per hour.
+
+    This works out at 1 req/sec. This is an initial figure, if the servers hold up I will definitely consider bumping this number.
+
+    You can see what the rate limit is and how many requests are remaining by looking at the rate limit headers sent in the response.
 
 - [Visual Studio Code](https://code.visualstudio.com/): Programming code editor created by Microsoft.
 
@@ -63,8 +74,8 @@ Link to conceptual Wireframe:
 - [W3CMarkupValidation](https://validator.w3.org/) Tools to assess CSS and HTML validation.
 - [Metatags](https://metatags.io/) Generation of Meta tag content for social media sharing and SEO.
 - [GoogleFonts](https://fonts.google.com/) - font families from Google.
-- [Google Icons](https://fontawesome.com/) - Icons imported via fontawesome css.
-- [EmailJS](#) - Javascript for sending of contact form Emails.
+- [Material Icons](https://material.io/resources/icons/?style=baseline) - Material Design ICONS.
+- [EmailJS](https://www.emailjs.com/) - Javascript library for sending of contact form Emails.
 
 ## Testing
 **Viewports/Responsiveness**
@@ -85,7 +96,7 @@ Testing done on VSCode Using Live server.- Mobile responsiveness also tested liv
 - Navigation Buttons and Navbar links tested to navigate to specific pages.
 - Various screen sizes also tested from large screen to mobile.
 - Scrollable categories tested for each section.
-- Services page - stacking of elements on smaller screens.
+- Caclulator/Main page - stacking of elements on smaller screens.
 - Navbar Hamburger menu showing on mobile.
 
 1. Main/Index Page:
@@ -93,9 +104,17 @@ Testing done on VSCode Using Live server.- Mobile responsiveness also tested liv
     2. Slide IBU slider to see if Get Recipe (Red) button updates values - Get Recipes button Generates Media Cards with Brewdog recipes for all ABU > than the selected values of IBU Bitterness level
     3. Slide ABU slider & IBU slider to see if Get Recipe (Green) button updates values - Get Recipes button Generates Media Cards with Brewdog recipes for all ABU > & IBU > than the selected values of ABV + IBU combined.
 
-2. Brew Calculator Page:
+2. Brew Calculator Page - ABV Calc:
+    1. Add initial gravity and final gravity readings. Number content only. Text content generates red error
+    2. Calculate ABV % generates correct Alcohol %age based on IG and FG readings.
+    3. Reset ABV button generates alert and removes any values present on input fields and textarea
+3. Brew Calculator Page - Priming Sugar Calc:
+    1. Add initial volume of Beer in Gallons / Temperature of Beer and Volumes of C02 based on style table volumes. Number content only. Text content generates red error
+    2. Dropdown menu for sugarType displays correctly and is fed into Priming sugar calculator. Switch case function used to selext Sugar Factor.
+    3. Calculate Priming Sugar in Grams generates correct sugar volume based on chosen sugar type.
+    4. Reset ABV button generates alert and removes any values present on input fields and textarea
 
-3. Contact form:
+4. Contact form:
     1. Go to the "Contact Us" page
     2. Try to submit the empty form and verify that an error message about the required fields appears
     3. Try to submit the form with an invalid email address type and verify that a relevant error message appears
@@ -103,47 +122,47 @@ Testing done on VSCode Using Live server.- Mobile responsiveness also tested liv
  
 **Media Queries**
 Media Queries Break Screens smaller than 860px:
-- Icons on services page reduce 50% in size
-- Main logo reduces 50% in size.
+- Main Page Header Text reduces in size on smaller screens
+- Materialize Framework handles many resizing of Rows and colums based on s/m factors chosen on page HTML.
 
 **Issues**
-- Current: Contact Form still needs to be connected to backend mailing system to receive data.
-- Resolved: Stacking of Icons on services page was stacking text first then logo, reversed and ordered to fix.
-- Resolved: Logo sizes too large on small screens. added medi queries to adjust sizes.
+- Current: Dropdown Menu of Beers not showing correctly on main page once content is fetched from API
+- Resolved: Banner text was impeded display download of DIYDOg recipeds pdf. Media Query added to reduce text size.
 
 
 ## Deployment
 Deployed using GitHub Pages accessed via the link below
- - https://dermomurphy.github.io/Dublin-360-CI/
+ - https://dermomurphy.github.io/BrewPunk-CI/
  index.html is main content page - all other navigatable via this webpage
 
   **Process**
    1. Created a Github account at https://github.com My account: https://github.com/Dermomurphy
 
-   2. Synced folder on local machine to Github Repo via VsCode: https://github.com/Dermomurphy/Dublin-360-CI
+   2. Synced folder on local machine to Github Repo via VsCode: https://github.com/Dermomurphy/BrewPunk-CI
 
-   3. To publish the project to see it on the web go to Settings on Repo , scroll down to the heading, GitHub Pages. Under the Source setting, Use drop-down menu to select master branch as a publishing source and save. Refreshed the github page, and you are then given a url where your page is published; The site is now published on gitHub pages at https://dermomurphy.github.io/Dublin-360-CI/
+   3. To publish the project to see it on the web go to Settings on Repo , scroll down to the heading, GitHub Pages. Under the Source setting, Use drop-down menu to select master branch as a publishing source and save. Refreshed the github page, and you are then given a url where your page is published; The site is now published on gitHub pages at https://dermomurphy.github.io/BrewPunk-CI/
 
-   4. To run this code on your local machine, you would go to my respository at https://github.com/Dermomurphy/Dublin-360-CI and on the home page on the right hand side just above all the files, you will see a green button that says, "Clone or download", this button will give you options to clone with HTTPS, open in desktop or download as a zip file. Then --> click the clipboard item to copy the Https address of the repo.
+   4. To run this code on your local machine, you would go to my respository at https://github.com/Dermomurphy/BrewPunk-CI and on the home page on the right hand side just above all the files, you will see a green button that says, "Clone or download", this button will give you options to clone with HTTPS, open in desktop or download as a zip file. Then --> click the clipboard item to copy the Https address of the repo.
    Open Git Bash/Terminal: 
-   CD the working directory to the location where you want the cloned directory to be made.you can use mkdir command to make a new directory, then cd into it.Type git clone, and then paste the URL: https://github.com/Dermomurphy/Dublin-360-CI.git Press Enter. The clone is created.
+   CD the working directory to the location where you want the cloned directory to be made.you can use mkdir command to make a new directory, then cd into it.Type git clone, and then paste the URL: https://github.com/Dermomurphy/BrewPunk-CI.git Press Enter. The clone is created.
    For more information about the above process; https://help.github.com/en/github/using-git/which-remote-url-should-i-use
 
 ## Credits
 
 ### Content
 - Main Text Written by Dermot Murphy
-- Some text for section Cards on Home was copied from [Wikipedia](https://en.wikipedia.org/wiki/) Descriptions
+- Punk API for Generating endpoints based on DIY DOG data
 - Google Fonts for font styles; https://fonts.google.com/
 - W3schools.com: for code used on contact form page and implementation if necessary.[W3Schools](https://www.w3schools.com/)
 
 ### Media
-- The photos used in this site were obtained from either Dermot Murphy or 
-https://www.wikipedia.org/
+- The photos used in this site were obtained  [Unsplash](https://unsplash.com/) 
+- Main Images on Recipe Cards taken from PunkAPI
+
 
 ### Acknowledgements
-
-- https://www.wikipedia.org/
+- PunkAPI - MAin API for generation of content
+- https://www.brewersfriend.com/beer-priming-calculator/ - Aided in formula for generation of Priming sugar calculator
 
 - Mentor Adegbenga Adeye:  for site layout inspiration, constructive advice. Github : https://github.com/deye9
 
