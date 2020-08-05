@@ -29,12 +29,15 @@ async function getDataABVIBU() {
   return data;
 }
 
+//  Get Random Beer and Display on main page //
 async function getDataRandom() {
    // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
   var response = await fetch("https://api.punkapi.com/v2/beers/random");
   data = await response.json();
   return data;
 }
+
+//  API  Templates for display of Data from api on return of MASH / MALTS/ HOPs / Yeast/Twist / Food  ///
 
 function mashTemplate(beerMethod) {
   return `
@@ -108,6 +111,9 @@ function foodTemplate(food) {
     `;
 }
 
+
+/// Main Beer Template Function to display cards on retrieval of DATA from Punk API //
+
 function beerTemplate(beer) {
   
   return `
@@ -172,6 +178,7 @@ function beerTemplate(beer) {
 `;
 };
 
+// TODO -- Creatmenu based off retrieval of DATa to select Beer
 function createMenu(data) {
    
   let i = 0;
@@ -183,6 +190,7 @@ function createMenu(data) {
   }
 };
 
+/// GET Alcohol by Volume function call on Get REcipes by ABV button
 function getABV(){
 getDataABV().then((data) => {
   console.log(data);
@@ -194,6 +202,7 @@ getDataABV().then((data) => {
 });
 }
 
+/// GET Bitteness unit function call on Get REcipes by IBU button
 function getIBU(){
   getDataIBU().then((data) => {
     console.log(data);
@@ -205,6 +214,7 @@ function getIBU(){
   });
   }
 
+/// GET Bitteness + ABV  unit function call on Get REcipes by IBU and ABV button
   function getABVIBU(){
     getDataABVIBU().then((data) => {
       console.log(data);
@@ -216,6 +226,7 @@ function getIBU(){
     });
     }
 
+// Load Random Beer on loading of Browser window ///
 window.onload = function getRandom(){
   getDataRandom().then((data) => {
     console.log(data);
