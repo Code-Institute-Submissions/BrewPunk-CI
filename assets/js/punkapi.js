@@ -4,7 +4,7 @@ async function getDataABV() {
   let ABVValue = document.getElementById("ABVSlider").value;
   // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
   var response = await fetch(
-    `https://api.punkapi.com/v2/beers?` + `abv_gt=${ABVValue}` + `&per_page=80`
+    `https://api.punkapi.com/v2/beers?` + `abv_gt=${ABVValue}` + `&per_page=20`
   );
   data = await response.json();
   return data;
@@ -14,7 +14,7 @@ async function getDataIBU() {
   let IBUValue = document.getElementById("IBUSlider").value;
   // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
   var response = await fetch(
-    `https://api.punkapi.com/v2/beers?` + `ibu_gt=${IBUValue}` + `&per_page=80`
+    `https://api.punkapi.com/v2/beers?` + `ibu_gt=${IBUValue}` + `&per_page=20`
   );
   data = await response.json();
   return data;
@@ -27,7 +27,7 @@ async function getDataABVIBU() {
   var response = await fetch(
     `https://api.punkapi.com/v2/beers?` +
       `abv_gt=${ABVValue}&ibu_gt=${IBUValue}` +
-      `&per_page=80`
+      `&per_page=20`
   );
   data = await response.json();
   return data;
