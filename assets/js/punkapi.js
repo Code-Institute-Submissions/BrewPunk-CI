@@ -1,37 +1,41 @@
 var data;
 
-
 async function getDataABV() {
-
   let ABVValue = document.getElementById("ABVSlider").value;
-   // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
-  var response = await fetch(`https://api.punkapi.com/v2/beers?` + `abv_gt=${ABVValue}`+ `&per_page=80`);
+  // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
+  var response = await fetch(
+    `https://api.punkapi.com/v2/beers?` + `abv_gt=${ABVValue}` + `&per_page=80`
+  );
   data = await response.json();
   return data;
 }
 
 async function getDataIBU() {
-
   let IBUValue = document.getElementById("IBUSlider").value;
-   // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
-  var response = await fetch(`https://api.punkapi.com/v2/beers?` + `ibu_gt=${IBUValue}`+ `&per_page=80`);
+  // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
+  var response = await fetch(
+    `https://api.punkapi.com/v2/beers?` + `ibu_gt=${IBUValue}` + `&per_page=80`
+  );
   data = await response.json();
   return data;
 }
 
 async function getDataABVIBU() {
-
   let IBUValue = document.getElementById("IBUSlider").value;
   let ABVValue = document.getElementById("ABVSlider").value;
-   // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
-  var response = await fetch(`https://api.punkapi.com/v2/beers?` + `abv_gt=${ABVValue}&ibu_gt=${IBUValue}`+ `&per_page=80`);
+  // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
+  var response = await fetch(
+    `https://api.punkapi.com/v2/beers?` +
+      `abv_gt=${ABVValue}&ibu_gt=${IBUValue}` +
+      `&per_page=80`
+  );
   data = await response.json();
   return data;
 }
 
 //  Get Random Beer and Display on main page //
 async function getDataRandom() {
-   // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
+  // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
   var response = await fetch("https://api.punkapi.com/v2/beers/random");
   data = await response.json();
   return data;
@@ -111,22 +115,26 @@ function foodTemplate(food) {
     `;
 }
 
-
 /// Main Beer Template Function to display cards on retrieval of DATA from Punk API //
 
 function beerTemplate(beer) {
-  
   return `
     <div class="col s12 m6 beer-card">
     <div class="card hoverable">
     <div class="card-image waves-effect waves-block waves-light materialboxed">
-  <img class="activator beer-photo" src="${beer.image_url ? beer.image_url : "https://images.punkapi.com/v2/7.png"}" id="${
-    beer.name
-  }" alt="beer-image">
+  <img class="activator beer-photo" src="${
+    beer.image_url ? beer.image_url : "https://images.punkapi.com/v2/7.png"
+  }" id="${beer.name}" alt="beer-image">
   </div>
   <div class="card-content">
-  <span class="card-title activator black-text text-darken-4">${beer.name}<i class="material-icons right">expand_less</i></span>
-  <h2 class="deep-orange-text">ABV ${beer.abv}%  <span class="new badge blue" data-badge-caption="IBU">${beer.ibu}</span></h2>
+  <span class="card-title activator black-text text-darken-4">${
+    beer.name
+  }<i class="material-icons right">expand_less</i></span>
+  <h2 class="deep-orange-text">ABV ${
+    beer.abv
+  }%  <span class="new badge blue" data-badge-caption="IBU">${
+    beer.ibu
+  }</span></h2>
     <p>${beer.description}</p>
     <hr>
     <h4 class="deep-orange-text center"><em>"${beer.tagline}"</em></h4>
@@ -136,7 +144,9 @@ function beerTemplate(beer) {
     <hr>
     </div>
     <div class="card-reveal">
-    <span class="card-title grey-text text-darken-4">${beer.name}<i class="material-icons right">close</i></span>
+    <span class="card-title grey-text text-darken-4">${
+      beer.name
+    }<i class="material-icons right">close</i></span>
     <h5 class="card-title deep-orange-text center">Ingredients</h5>
     <h6 class="card-title">Malts</h6>
   ${beer.ingredients.malt ? maltsTemplate(beer.ingredients.malt) : ""}
@@ -160,12 +170,8 @@ function beerTemplate(beer) {
     <li>EBC: ${beer.ebc}</li>
     <li>Target Original Gravity:${beer.target_og} </li>
     <li>Target Final Gravity: ${beer.target_fg}</li>
-    <li>Boil Volume: ${beer.boil_volume.value} ${
-    beer.boil_volume.unit
-  }</li>
-    <li>Final Volume: ${beer.volume.value} ${
-    beer.volume.unit
-  }</li>
+    <li>Boil Volume: ${beer.boil_volume.value} ${beer.boil_volume.unit}</li>
+    <li>Final Volume: ${beer.volume.value} ${beer.volume.unit}</li>
     <li class="list-group-item">Fermentation Temp: ${
       beer.method.fermentation.temp.value
     } ${beer.method.fermentation.temp.unit}</li>
@@ -176,58 +182,55 @@ function beerTemplate(beer) {
 </div>
 
 `;
-};
+}
 
 // TODO -- Creatmenu based off retrieval of DATa to select Beer
 function createMenu(data) {
-   
   let i = 0;
   for (i = 0; i < data.length; i++) {
     document.getElementById("myMenu").innerHTML += `
-    <option value=${(i+1)}>${data[i].name}--${data[i].abv} test ABV</option>`
-      ;
-
+    <option value=${i + 1}>${data[i].name}--${data[i].abv} test ABV</option>`;
   }
-};
+}
 
 /// GET Alcohol by Volume function call on Get REcipes by ABV button
-function getABV(){
-getDataABV().then((data) => {
-  console.log(data);
-  document.getElementById("root").innerHTML = `
+function getABV() {
+  getDataABV().then((data) => {
+    console.log(data);
+    document.getElementById("root").innerHTML = `
     <h1 class="center">ABV Recipe Results</h1>
     <div class="row center"> ${data.map(beerTemplate).join("")}</div>
     `;
-   // createMenu(data);
-});
+    // createMenu(data);
+  });
 }
 
 /// GET Bitteness unit function call on Get REcipes by IBU button
-function getIBU(){
+function getIBU() {
   getDataIBU().then((data) => {
     console.log(data);
     document.getElementById("root").innerHTML = `
       <h1 class="center">IBU Recipe Results</h1>
       <div class="row center"> ${data.map(beerTemplate).join("")}</div>
       `;
-     // createMenu(data);
+    // createMenu(data);
   });
-  }
+}
 
 /// GET Bitteness + ABV  unit function call on Get REcipes by IBU and ABV button
-  function getABVIBU(){
-    getDataABVIBU().then((data) => {
-      console.log(data);
-      document.getElementById("root").innerHTML = `
+function getABVIBU() {
+  getDataABVIBU().then((data) => {
+    console.log(data);
+    document.getElementById("root").innerHTML = `
         <h1 class="center">ABV IBU Recipe Results</h1>
         <div class="row center"> ${data.map(beerTemplate).join("")}</div>
         `;
-       // createMenu(data);
-    });
-    }
+    // createMenu(data);
+  });
+}
 
 // Load Random Beer on loading of Browser window ///
-window.onload = function getRandom(){
+window.onload = function getRandom() {
   getDataRandom().then((data) => {
     console.log(data);
     document.getElementById("random").innerHTML = `
@@ -235,9 +238,6 @@ window.onload = function getRandom(){
       <div class="row center"> 
       ${data.map(beerTemplate).join("")}</div>
       `;
-     // createMenu(data);
+    // createMenu(data);
   });
-  }
-
-
-
+};
