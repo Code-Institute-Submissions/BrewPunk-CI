@@ -30,11 +30,11 @@ Link to conceptual Wireframe:
 
 ## Features
 
-**Main Home Page** - Main Content Cards for Dublin Landmarks broken into sections with links to Each 360 image and website of the tourist atttraction.
+**Main Home Page** - Main Content Cards for Home Brews Selected |  ABV and IBU Selection sliders with Get Recipe Buttons | Random Beer Recipe Generated on page refresh.
 
-**Brew Calculator Page** - Media Card landscape style listing main features available with associated FA Icons alternating in style.
+**Brew Calculator Page** - 2 Brewing Calcuators one for ABV calcuation the other for Priming sugar calculation.
 
-**Contact Page** - Main Contact form for Contacting Dublin-360 with message and topic area
+**Contact Page** - Main Contact form for Contacting Brewpunk with message ,reply email, first name and last name fiels.
  
 ### Existing Features
 - **Links to Sections** - Quick Navbar + Bottom right corner pop out links to Each Page. Also on Footer.
