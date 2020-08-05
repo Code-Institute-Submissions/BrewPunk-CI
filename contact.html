@@ -121,16 +121,6 @@
     </div>
     <div class="parallax"><img src="assets/img/background2.jpg" alt="Unsplashed background img 2"></div>
   </div>
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h4 class="header col s12">Have a Hoppy Day</h4>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="assets/img/background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
 
   <footer class="page-footer deep-orange">
     <div class="container">
@@ -184,36 +174,31 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="assets/js/materialize.js"></script>
   <script src="assets/js/init.js"></script>
-  <!--NoUI slider JS-->
-  <script src="assets/js/nouislider.js"></script>
-  <!--Main JS file-->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/punkapi.js"></script>
-  <!--FAB Script -->
-  <script> 
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, {
-      direction: 'top'
-    });
-  });
-
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.materialboxed');
-    var instances = M.Materialbox.init(elems, {inDuration: 250});
-  });
-  </script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-<script type="text/javascript">
+  <!-- Email JS -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+ <script type="text/javascript">
    (function(){
       emailjs.init("user_tuwlJkVrK7ek1PGGOqVDX");
    })();
 </script>
 
 <script>
+    function validateForm() {
+    var fname = document.forms["myform"]["first_name"].value;
+    var lname = document.forms["myform"]["last_name"].value;
+    var email = document.forms["myform"]["reply_to"].value;
+    var message = document.forms["myform"]["message_html"].value;
+    if (fname == "" || lname == "" || email == "" || message == "") {
+     alert("All fields must be filled out");
+     return false;
+   
+  }
+}
     var myform = $("form#myform");
     myform.submit(function(event){
+    if (validateForm() === false){
+        return false;
+    }else {
 	event.preventDefault();
 
   // Change to your service ID, or keep using the default service
@@ -223,14 +208,16 @@
   myform.find("button").text("Sending...");
   emailjs.sendForm(service_id,template_id,myform[0])
   	.then(function(){ 
-    	alert("Your Message Has Been Sent!");
+       alert("Your Message Has Been Sent!");
        myform.find("button").text("Send");
     }, function(err) {
        alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
        myform.find("button").text("Send");
     });
   return false;
+};
 });
+
 </script>
   </body>
 </html>
