@@ -7,7 +7,7 @@ Milestone 2 Project: Code Institute: BrewPunk-CI
 
 A Site developed for MS2 Project in Code Institute. The site consists of 3 pages. Index/Brew Calculator/Contact.
 Developed for Homebrewers using the PunkAPI to search for Brewdog Homebrew recipes based on IBU and ABV.
-Card content is revealed for Selected Homebrew recipes. Card content can be revealed by selecting the arrow on each content card to reveal the ingredients needed to make the beers generated. Alcohol % is displayed clearly along with IBU for each beer generated based on the user selection from the slider values selected. Key ingredients such as MAlts/Hops and Yeast are displayed for the homebrewer to replicate their favourite Brewdog recipes.
+Card content is revealed for Selected Homebrew recipes. Card content can be revealed by selecting the arrow on each content card to reveal the ingredients needed to make the beers generated. Alcohol % is displayed clearly along with IBU for each beer generated based on the user selection from the slider values selected. Key ingredients such as Malts/Hops and Yeast are displayed for the homebrewer to replicate their favourite Brewdog recipes.
 
 Brewing calcuators for measuring alcohol content of your homebrew using the initial and final Gravity of your brew.
 A priming sugar calcuator based on brew volume and Temperature with recommended C02 Volumes given based on style of beer.
@@ -16,9 +16,9 @@ A contact form for Contacting us using emailJS.
  
 ## UX
 
-- This project gives a homebrew user access to Brewdogs selection of Homebrew recipes. The user can select a desired Alcohol content or Bitterness level and fetch appropriate homebrrew recipes based on values greater than selected. Card content reveals the beer name and IBU along with Mashing details and ingredients needed to replicate the beer. Sliders are used to Generate the ABV and IBU values on the main page.
+- This project gives a homebrew user access to Brewdogs selection of Homebrew recipes. The user can select a desired Alcohol content or Bitterness level and fetch appropriate homebrew recipes based on values greater than selected. Card content reveals the beer name and IBU along with Mashing details and ingredients needed to replicate the beer. Sliders are used to Generate the ABV and IBU values on the main page.
 - Brewing Calculators: -ABV - The user can use the ABV calculator that are developed for Homebrewing calculation of Alcohol % based on the initial Gravit and final Gravity of the beer. Input fields clearly marked with helper text and two buttons. One to calculate the ABV and the other to reset the fields. Number content can only be placed in the input fields. Red errors will appear if text is input in the ABV Calculator.
-- Brewing Calculators: -Priming Sugar - The user can use the Priming sugar calculator that are developed for Homebrewing calculation of Priming sugar needed for bottlling based on the initial Volume and Temperatur of the beer. Input fields clearly marked with helper text and two buttons. One to calculate the Priming Sugar and the other to reset the fields. Number content can only be placed in the input fields. Red errors will appear if text is input in the Priming Calculator
+- Brewing Calculators: -Priming Sugar - The user can use the Priming sugar calculator that are developed for Homebrewing calculation of Priming sugar needed for bottlling based on the initial Volume and Temperature of the beer. Input fields clearly marked with helper text and two buttons. One to calculate the Priming Sugar and the other to reset the fields. Number content can only be placed in the input fields. Red errors will appear if text is input in the Priming Calculator
 
 - If a user is interestted in the services offered they can navigate to this via the navbar or a main button.
 There is also a contact form available so they can either suggest a feature or enquire about services.
@@ -34,7 +34,7 @@ Link to conceptual Wireframe:
 
 **Brew Calculator Page** - 2 Brewing Calcuators one for ABV calcuation the other for Priming sugar calculation.
 
-**Contact Page** - Main Contact form for Contacting Brewpunk with message ,reply email, first name and last name fiels.
+**Contact Page** - Main Contact form for Contacting Brewpunk with message ,reply email, first name and last name fields.
  
 ### Existing Features
 - **Links to Sections** - Quick Navbar + Bottom right corner pop out links to Each Page. Also on Footer.
