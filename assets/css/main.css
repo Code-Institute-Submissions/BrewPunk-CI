@@ -47,6 +47,10 @@ input[type=range] + .thumb.active .value {
     font-size: 12px;
 }
 
+.dropdown-content {
+    min-width: fit-content;
+}
+
 @media only screen and (max-width: 880px) {
     .banner-text {
       font-size: 1.2em;

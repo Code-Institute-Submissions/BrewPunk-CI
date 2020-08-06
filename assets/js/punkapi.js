@@ -26,8 +26,8 @@ async function getDataABVIBU() {
   // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
   var response = await fetch(
     `https://api.punkapi.com/v2/beers?` +
-      `abv_gt=${ABVValue}&ibu_gt=${IBUValue}` +
-      `&per_page=20`
+    `abv_gt=${ABVValue}&ibu_gt=${IBUValue}` +
+    `&per_page=20`
   );
   data = await response.json();
   return data;
@@ -47,11 +47,11 @@ function mashTemplate(beerMethod) {
   return `
   <ul class="list-group list-group-flush">
   ${beerMethod
-    .map(
-      (item) =>
-        `<li class="list-group-item">${item.duration} mins at ${item.temp.value} &degc</li>`
-    )
-    .join("")}
+      .map(
+        (item) =>
+          `<li class="list-group-item">${item.duration} mins at ${item.temp.value} &degc</li>`
+      )
+      .join("")}
   </ul>
   `;
 }
@@ -62,8 +62,7 @@ function maltsTemplate(malts) {
     ${malts
       .map(
         (item) => `
-    <li class="list-group-item">Malt: ${item.name}</li>
-    <li class="list-group-item"> ${item.amount.value} ${item.amount.unit}</li>
+    <li class="list-group-item">Malt: ${item.name} - ${item.amount.value} ${item.amount.unit}</li>
     `
       )
       .join("")}
@@ -77,10 +76,8 @@ function hopsTemplate(hops) {
     ${hops
       .map(
         (item) => `
-    <li class="list-group-item">Hop: ${item.name}</li>
-    <li class="list-group-item">Attribute: ${item.attribute}</li>
-    <li class="list-group-item">Add: ${item.add}</li>
-    <li class="list-group-item">Qty: ${item.amount.value} ${item.amount.unit}</li>
+    <li class="list-group-item">Hop: ${item.name} - ${item.amount.value} ${item.amount.unit}</li>
+    <li class="list-group-item">Attribute: ${item.attribute} --  Time to Add: ${item.add}</li>
     <hr>
     `
       )
@@ -124,17 +121,17 @@ function beerTemplate(beer) {
     <div class="card-image waves-effect waves-block waves-light materialboxed">
   <img class="activator beer-photo" src="${
     beer.image_url ? beer.image_url : "https://images.punkapi.com/v2/7.png"
-  }" id="${beer.name}" alt="beer-image">
+    }" id="${beer.name.replace(/ /g, '-')}" alt="beer-image">
   </div>
   <div class="card-content">
   <span class="card-title activator black-text text-darken-4">${
     beer.name
-  }<i class="material-icons right">expand_less</i></span>
+    }<i class="material-icons right">expand_less</i></span>
   <h2 class="deep-orange-text">ABV ${
     beer.abv
-  }%  <span class="new badge blue" data-badge-caption="IBU">${
+    }%  <span class="new badge blue" data-badge-caption="IBU">${
     beer.ibu
-  }</span></h2>
+    }</span></h2>
     <p>${beer.description}</p>
     <hr>
     <h4 class="deep-orange-text center"><em>"${beer.tagline}"</em></h4>
@@ -145,7 +142,7 @@ function beerTemplate(beer) {
     </div>
     <div class="card-reveal">
     <span class="card-title grey-text text-darken-4">${
-      beer.name
+    beer.name
     }<i class="material-icons right">close</i></span>
     <h5 class="card-title deep-orange-text center">Ingredients</h5>
     <h6 class="card-title">Malts</h6>
@@ -173,7 +170,7 @@ function beerTemplate(beer) {
     <li>Boil Volume: ${beer.boil_volume.value} ${beer.boil_volume.unit}</li>
     <li>Final Volume: ${beer.volume.value} ${beer.volume.unit}</li>
     <li class="list-group-item">Fermentation Temp: ${
-      beer.method.fermentation.temp.value
+    beer.method.fermentation.temp.value
     } ${beer.method.fermentation.temp.unit}</li>
   </ul>
     <h4 class="card-title">First Brewed: ${beer.first_brewed}</h4>
@@ -186,16 +183,19 @@ function beerTemplate(beer) {
 
 // TODO -- Creatmenu based off retrieval of DATa to select Beer
 function createMenu(data) {
+  document.getElementById("selectBeerButton").innerHTML= `<a class='dropdown-trigger btn-large waves-effect waves-light amber darken-1' data-target='beerDropdown' id='dropdownLabel'>Select Beer</a>`
   let i = 0;
-  document.getElementById("beerSelector").innerHTML ='<option value="0" disabled selected>Choose your option</option>';
   for (i = 0; i < data.length; i++) {
-    document.getElementById("beerSelector").innerHTML += `
-    <option value="${i + 1}">${data[i].name}--${data[i].abv}%</option>`;
+    document.getElementById("beerDropdown").innerHTML +=
+      `<li tabindex="${i}"><a href="#${data[i].name.replace(/ /g,'-')}">${data[i].name}--${data[i].abv}% ABV</a></li>`;
   }
-  document.getElementById("selectorLabel").innerText = "Beer Select"; 
-  $(document).ready(function () {
-    $('#beerSelector').formSelect();
+  
+      // Dropdown init
+      $(document).ready(function(){
+        $('.modal').modal();
+        $('.dropdown-trigger').dropdown();
   });
+
 }
 
 /// GET Alcohol by Volume function call on Get REcipes by ABV button
@@ -207,7 +207,7 @@ function getABV() {
     <div class="row center"> ${data.map(beerTemplate).join("")}</div>
     `;
     createMenu(data);
-   // return data;
+    // return data;
   });
 }
 
@@ -219,7 +219,7 @@ function getIBU() {
       <h1 class="center">IBU Recipe Results</h1>
       <div class="row center"> ${data.map(beerTemplate).join("")}</div>
       `;
-    // createMenu(data);
+     createMenu(data);
   });
 }
 
@@ -231,7 +231,7 @@ function getABVIBU() {
         <h1 class="center">ABV IBU Recipe Results</h1>
         <div class="row center"> ${data.map(beerTemplate).join("")}</div>
         `;
-    // createMenu(data);
+      createMenu(data);
   });
 }
 
