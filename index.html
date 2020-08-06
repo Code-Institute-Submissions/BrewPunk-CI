@@ -71,9 +71,9 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header main-heading center deep-orange-text text-darken-4 z-depth-1">BrewPunk</h1>
+        <h1 class="header main-heading center white-text z-depth-1">BrewPunk</h1>
         <div class="row center">
-          <h4 class="header col s12 grey-text text-lighten-5" id="banner-text">Every year Brewdog re-release one of the
+          <h4 class="header col s12 grey-text text-lighten-5 banner-text">Every year Brewdog re-release one of the
             best documents they have ever put together, DIY Dog. A compilation for (and of) the ages, it contains every
             single BrewDog beer recipe in homebrew-level detail.</h4>
         </div>
@@ -100,16 +100,22 @@
     <!--Autocomplete section-->
     <div class="section">
       <form action="getBeers()">
+        <div class="row">
+        <div class="col s6">
         <h2 class='center'>ABV %</h2>
         <p class="range-field">
           <input type="range" id="ABVSlider" min="0" max="20" step="0.5" value="2"
             onchange="updateABVButton(),updateABVIBUButton()" />
         </p>
+      </div>
+      <div class="col s6">
         <h2 class='center'>IBU</h2>
         <p class="range-field">
           <input type="range" id="IBUSlider" min="0" max="200" step="5" value="35"
             onchange="updateIBUButton(),updateABVIBUButton()" />
         </p>
+      </div>
+      </div>
       </form>
       <div class="row">
         <div class="col s12 m4">
