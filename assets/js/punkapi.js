@@ -119,7 +119,7 @@ function foodTemplate(food) {
 
 function beerTemplate(beer) {
   return `
-    <div class="col s12 m6 beer-card">
+    <div class="col s12 m12 l6 beer-card">
     <div class="card hoverable">
     <div class="card-image waves-effect waves-block waves-light materialboxed">
   <img class="activator beer-photo" src="${
@@ -187,10 +187,15 @@ function beerTemplate(beer) {
 // TODO -- Creatmenu based off retrieval of DATa to select Beer
 function createMenu(data) {
   let i = 0;
+  document.getElementById("beerSelector").innerHTML ='<option value="0" disabled selected>Choose your option</option>';
   for (i = 0; i < data.length; i++) {
-    document.getElementById("myMenu").innerHTML += `
-    <option value=${i + 1}>${data[i].name}--${data[i].abv} test ABV</option>`;
+    document.getElementById("beerSelector").innerHTML += `
+    <option value="${i + 1}">${data[i].name}--${data[i].abv}%</option>`;
   }
+  document.getElementById("selectorLabel").innerText = "Beer Select"; 
+  $(document).ready(function () {
+    $('#beerSelector').formSelect();
+  });
 }
 
 /// GET Alcohol by Volume function call on Get REcipes by ABV button
@@ -201,7 +206,8 @@ function getABV() {
     <h1 class="center">ABV Recipe Results</h1>
     <div class="row center"> ${data.map(beerTemplate).join("")}</div>
     `;
-    // createMenu(data);
+    createMenu(data);
+   // return data;
   });
 }
 

@@ -176,22 +176,16 @@
       <!--   Card Section   -->
       <div class="row">
         <h1 class="center">Your Random Beer Recipe!</h1>
-        <div id="random" class="col s12 m12 offset-m3">
-          <h1 class="center">Your Random Beer Recipe!</h1>
+        <div id="random" class="col s12 m12 l12 offset-l3">
           <!--Random Beer Card Generated-->
         </div>
       </div>
       <!--Menu of Beers TODO!-->
       <div class="row">
         <div class="input-field col s12">
-          <select>
-            <option value="" disabled selected>Choose your option</option>
-            <span id="myMenu">
-              <option value="1">Option 1</option>
-            </span>
-
+          <select id="beerSelector">
           </select>
-          <label>Beer Select</label>
+          <label id="selectorLabel"></label>
         </div>
       </div>
       <div id="root">
@@ -297,6 +291,9 @@
   <script src="assets/js/init.js"></script>
   <!--NoUI slider JS-->
   <script src="assets/js/nouislider.js"></script>
+
+
+
   <!--Main JS file-->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/punkapi.js"></script>
@@ -314,6 +311,7 @@
       var instances = M.Materialbox.init(elems, { inDuration: 250 });
     });
   </script>
+ 
 
 </body>
 
