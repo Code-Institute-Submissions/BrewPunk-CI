@@ -66,6 +66,7 @@ function calcABV(){
     document.getElementById("volumeCO2").value = "";
     document.getElementById("initialTemp").value = "";
     document.getElementById("sugarResult").value = "";
+    //document.getElementById("sugarSelect").value = "0";
     alert('Priming Calculator Reset');
  
  }

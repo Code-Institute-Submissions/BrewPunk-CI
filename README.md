@@ -161,7 +161,7 @@ Deployed using GitHub Pages accessed via the link below
 - W3schools.com: for code used on contact form page and implementation if necessary.[W3Schools](https://www.w3schools.com/)
 
 ### Media
-- The photos used in this site were obtained  [Unsplash](https://unsplash.com/) + [DIY DOG](https://www.brewdog.com/uk/community/diy-dog)
+- The photos used in this site were obtained  [Unsplash](https://unsplash.com/) [Markusspiske](https://unsplash.com/@markusspiske) + [DIY DOG](https://www.brewdog.com/uk/community/diy-dog)
 - Main Images on Recipe Cards taken from PunkAPI.
 
 

@@ -26,14 +26,14 @@
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen" />
+  <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen" />
   <link href="assets/css/nouislider.css" type="text/css" rel="stylesheet">
-  <link href="assets/css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="assets/css/main.css" type="text/css" rel="stylesheet" media="screen" />
 </head>
 
 <body>
-  <nav class="white" role="navigation">
+  <nav class="white" >
     <div class="nav-wrapper container">
       <a id="logo-container" href="index.html" class="brand-logo amber-text">BREWPUNK</a>
       <ul class="right hide-on-med-and-down">
@@ -172,17 +172,17 @@
             <div class="input-field col s12 m4">
               <input placeholder="5 Gallons" id="initialAmount" type="number" step="0.5" min="1.0" max="1000.0"
                 class="validate center">
-              <label for="initialGravity">Volume of Beer (Gallons)</label>
+              <label for="initialAmount">Volume of Beer (Gallons)</label>
             </div>
             <div class="input-field col s12 m4">
               <input placeholder="1.5" id="volumeCO2" type="number" step="0.1" min="1.5" max="5.00"
                 class="validate center">
-              <label for="finalGravity">volume CO2 (See Table)</label>
+              <label for="volumeCO2">volume CO2 (See Table)</label>
             </div>
             <div class="input-field col s12 m4">
-              <input placeholder="38 Farenheit" id="initialTemp" type="number" step="0.5" min="5.00" max="150.00"
+              <input placeholder="68 Farenheit" id="initialTemp" type="number" step="0.5" min="40.00" max="150.00"
                 class="validate center">
-              <label for="finalGravity">Initial Temperature (F)</label>
+              <label for="initialTemp">Initial Temperature (F)</label>
             </div>
           </div>
           <div class="row">
@@ -196,7 +196,7 @@
                 <option value="5">Corn Syrup</option>
                 <option value="6">Brown Sugar</option>
               </select>
-              <label for="sugarType">Brewing Sugar Type</label>
+              <label for="sugarSelect">Brewing Sugar Type</label>
             </div>
           </div>
           <div class="row">
@@ -281,7 +281,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h2><a id="logo-container" href="index.html" class="brand-logo deep-orange-text">BREWPUNK</a></h2>
+          <h2><a id="logo-container2" href="index.html" class="brand-logo deep-orange-text">BREWPUNK</a></h2>
         </div>
       </div>
     </div>
@@ -293,7 +293,7 @@
 
       <div class="row">
         <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h3><i class="mdi-content-send brown-text">Get In Touch!</i></h3>
           <h4><a href="contact.html">Contact Us</a></h4>
           <p class="center light">Keep on Brewing! Want to see more recipes.
             Now accepting Donations!</p>
@@ -319,7 +319,8 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">BrewPunk Bio</h5>We are a team of beer enthusiasts and home brewers working on this
+          <h5 class="white-text">BrewPunk Bio</h5>
+          <p>We are a team of beer enthusiasts and home brewers working on this
           project. We aim to share with any avid home brewer the knowledge to brew the perfect homebrew. New Receipes
           are appreciated.</p>
 
