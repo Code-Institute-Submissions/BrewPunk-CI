@@ -6,22 +6,36 @@ document.getElementById("abv-slider-value").innerHTML = ABVValue;
 document.getElementById("ibu-slider-value").innerHTML = IBUValue;
 document.getElementById(
   "abvibu-slider-value"
-).innerHTML = `ABV > ${ABVValue}% + IBU > ${IBUValue}`;
+).innerHTML = `ABV>${ABVValue}% + IBU>${IBUValue}`;
+
+function getABVValue() {
+  ABVValue = document.getElementById("ABVSlider").value;
+  return ABVValue;
+};
+
+function getIBUValue() {
+  IBUValue = document.getElementById("IBUSlider").value;
+  return IBUValue;
+};
 
 function updateABVButton() {
-  let ABVValue = document.getElementById("ABVSlider").value;
+  ABVValue = getABVValue();
   document.getElementById("abv-slider-value").innerHTML = ABVValue;
-}
+};
 
 function updateIBUButton() {
-  let IBUValue = document.getElementById("IBUSlider").value;
+  IBUValue = getIBUValue();
   document.getElementById("ibu-slider-value").innerHTML = IBUValue;
-}
+};
 
 function updateABVIBUButton() {
-  let ABVValue = document.getElementById("ABVSlider").value;
-  let IBUValue = document.getElementById("IBUSlider").value;
+  ABVValue = getABVValue();
+  IBUValue = getIBUValue();
+
   document.getElementById(
     "abvibu-slider-value"
   ).innerHTML = `ABV > ${ABVValue}% + IBU > ${IBUValue}`;
-}
+};
+
+// Do not display Selext Beer Buttoon until function called
+document.getElementById("selectButton").style.display = "none";

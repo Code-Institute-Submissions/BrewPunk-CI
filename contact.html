@@ -27,12 +27,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen" />
     <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen" />
-    <link href="assets/css/nouislider.css" type="text/css" rel="stylesheet">
     <link href="assets/css/main.css" type="text/css" rel="stylesheet" media="screen" />
 </head>
 
 <body>
-    <nav class="white" >
+    <nav class="white">
         <div class="nav-wrapper container">
             <a id="logo-container" href="index.html" class="brand-logo amber-text">BREWPUNK</a>
             <ul class="right hide-on-med-and-down">
@@ -54,13 +53,13 @@
         <!--Floating Action Button-->
         <div class="fixed-action-btn">
             <a class="btn-floating btn-large amber">
-                <i class="large material-icons">mode_edit</i>
+                <i class="large material-icons">home</i>
             </a>
             <ul>
-                <li><a class="btn-floating deep-orange" href="index.html"><i class="material-icons">home</i></a></li>
-                <li><a class="btn-floating yellow darken-1" href="calcluator.html"><i
+                <li><a class="btn-floating deep-orange" href="./index.html"><i class="material-icons">home</i></a></li>
+                <li><a class="btn-floating yellow darken-1" href="./calculator.html"><i
                             class="material-icons">calculate</i></a></li>
-                <li><a class="btn-floating green" href="contact.html"><i class="material-icons">email</i></a></li>
+                <li><a class="btn-floating green" href="./contact.html"><i class="material-icons">email</i></a></li>
             </ul>
         </div>
         <!--End of Floating action button-->
@@ -71,7 +70,8 @@
                 <br><br>
                 <h1 class="header main-heading center white-text z-depth-1">Contact Us</h1>
                 <div class="row center">
-                    <h4 class="header col s12 grey-text text-lighten-5 banner-text">Feel free to reach out to us if you have any
+                    <h4 class="header col s12 grey-text text-lighten-5 banner-text">Feel free to reach out to us if you
+                        have any
                         queries or suggestions.</h4>
                 </div>
                 <div class="row center">
@@ -151,7 +151,7 @@
     <footer class="page-footer deep-orange">
         <div class="container">
             <div class="row">
-                <div class="col l6 s12">
+                <div class="col l6 m6 s12">
                     <h5 class="white-text">BrewPunk Bio</h5>
                     <p class="grey-text text-lighten-4">We are a team of beer enthusiasts and home brewers working on
                         this project. We aim to share with any avid home brewer the knowledge to brew the perfect
@@ -159,7 +159,7 @@
 
 
                 </div>
-                <div class="col l3 s12">
+                <div class="col l3 m3 s6">
                     <h5 class="white-text">Pages</h5>
                     <ul>
                         <li><span class="material-icons">
@@ -173,7 +173,7 @@
                             </span> <a class="white-text" href="./contact.html"> Contact</a></li>
                     </ul>
                 </div>
-                <div class="col l3 s12">
+                <div class="col l3 m3 s6">
                     <h5 class="white-text">Connect</h5>
                     <ul>
                         <li><a class="white-text" href="https://www.facebook.com/Dublinbeertasting"
@@ -252,6 +252,15 @@
             };
         });
 
+    </script>
+    <script>
+        // fixed action button initialise FAB Script
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, {
+                direction: 'top'
+            });
+        });
     </script>
 </body>
 

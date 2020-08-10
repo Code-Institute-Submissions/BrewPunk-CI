@@ -112,21 +112,27 @@ function foodTemplate(food) {
     `;
 }
 
+function dropdownTemplate(beer){
+  return `
+  ${beer.name.map((item) => `<li>${item} </li>`).join("")}
+  `
+}
+
 /// Main Beer Template Function to display cards on retrieval of DATA from Punk API //
 
 function beerTemplate(beer) {
   return `
     <div class="col s12 m12 l6 beer-card">
     <div class="card hoverable">
-    <div class="card-image waves-effect waves-block waves-light materialboxed">
-  <img class="activator beer-photo" src="${
+    <div class="card-image waves-effect waves-block waves-light">
+  <img class="activator beer-photo materialboxed" src="${
     beer.image_url ? beer.image_url : "https://images.punkapi.com/v2/7.png"
     }" id="${beer.name.replace(/ /g, '-')}" alt="beer-image">
   </div>
   <div class="card-content">
   <span class="card-title activator black-text text-darken-4">${
     beer.name
-    }<i class="material-icons right">expand_less</i></span>
+    }<i class="material-icons right">expand_more</i></span>
   <h2 class="deep-orange-text">ABV ${
     beer.abv
     }%  <span class="new badge blue" data-badge-caption="IBU">${
@@ -181,69 +187,75 @@ function beerTemplate(beer) {
 `;
 }
 
+
+
 // TODO -- Creatmenu based off retrieval of DATa to select Beer
 function createMenu(data) {
-  document.getElementById("selectBeerButton").innerHTML= `<a class='dropdown-trigger btn-large waves-effect waves-light amber darken-1' data-target='beerDropdown' id='dropdownLabel'>Select Beer</a>`
-  let i = 0;
-  for (i = 0; i < data.length; i++) {
-    document.getElementById("beerDropdown").innerHTML +=
+  document.getElementById("selectButton").style.display = "block";
+  document.getElementById('dropdown1').innerHTML ="";
+  for (var i = 0; i < data.length; i++) {
+    document.getElementById('dropdown1').innerHTML +=
       `<li tabindex="${i}"><a href="#${data[i].name.replace(/ /g,'-')}">${data[i].name}--${data[i].abv}% ABV</a></li>`;
-  }
-  
-      // Dropdown init
-      $(document).ready(function(){
-        $('.modal').modal();
-        $('.dropdown-trigger').dropdown();
+  };
+  $('.dropdown-trigger').dropdown({
+    inDuration: 300,
+    outDuration: 225,
+    constrain_width: false, 
+    hover: true, // Activate on hover
+    gutter: 0, // Spacing from edge
+    belowOrigin: false, // Displays dropdown below the button
+    alignment: 'left' 
   });
 
-}
+};
+
+
+
 
 /// GET Alcohol by Volume function call on Get REcipes by ABV button
 function getABV() {
   getDataABV().then((data) => {
-    console.log(data);
     document.getElementById("root").innerHTML = `
     <h1 class="center">ABV Recipe Results</h1>
     <div class="row center"> ${data.map(beerTemplate).join("")}</div>
     `;
     createMenu(data);
-    // return data;
   });
 }
 
 /// GET Bitteness unit function call on Get REcipes by IBU button
 function getIBU() {
   getDataIBU().then((data) => {
-    console.log(data);
     document.getElementById("root").innerHTML = `
       <h1 class="center">IBU Recipe Results</h1>
       <div class="row center"> ${data.map(beerTemplate).join("")}</div>
       `;
-     createMenu(data);
+    createMenu(data);
   });
 }
 
 /// GET Bitteness + ABV  unit function call on Get REcipes by IBU and ABV button
 function getABVIBU() {
   getDataABVIBU().then((data) => {
-    console.log(data);
+
     document.getElementById("root").innerHTML = `
         <h1 class="center">ABV IBU Recipe Results</h1>
         <div class="row center"> ${data.map(beerTemplate).join("")}</div>
         `;
-      createMenu(data);
+     createMenu(data);
   });
 }
+
+
 
 // Load Random Beer on loading of Browser window ///
 window.onload = function getRandom() {
   getDataRandom().then((data) => {
-    console.log(data);
     document.getElementById("random").innerHTML = `
      
       <div class="row center"> 
       ${data.map(beerTemplate).join("")}</div>
       `;
-    // createMenu(data);
+  
   });
 };
