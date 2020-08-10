@@ -24,9 +24,9 @@ Milestone 2 Project: Code Institute: BrewPunk-CI
   - [**Viewports/Responsiveness**](#Viewports-Responsiveness)
   - [**Functional Testing**](#funtional-testing)
  
-7. [**Deployment**](#deployment)
+6. [**Deployment**](#deployment)
  
-8. [**Credits**](#credits)
+7. [**Credits**](#credits)
   - [**Content**](#content)
   - [**Media**](#media)
   - [**Acknowledgements**](#acknowledgements)
@@ -113,7 +113,7 @@ Link to conceptual Wireframe:
 - [EmailJS](https://www.emailjs.com/) - Javascript library for sending of contact form Emails.
 
 ## Testing
-### Viewports Responsiveness ###
+### Viewports Responsiveness
 http://ami.responsivedesign.is/  Used to Test site across multiple viewports:
 Desktop
     1600x992px scaled down to scale(0.3181)
@@ -124,7 +124,7 @@ Tablet
 Mobile
     320x480px scaled down to scale(0.219) 
 
-### Functional Testing ###
+### Functional Testing 
 Testing done on VSCode Using Live server.- Mobile responsiveness also tested live
 
 - All page/card/footer links were tested to open in seperate window.
