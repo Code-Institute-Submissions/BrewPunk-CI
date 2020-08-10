@@ -2,9 +2,37 @@
 MS2. Project Code Institute - Brewdog Homebrew Recipes + Homebrew Calculators 
 
 <img src="assets/img/amiResponsiveBrewPunk.png" style="margin: 0;">
-Link to live Website : https://dermomurphy.github.io/BrewPunk-CI/
+
+### [GitHub Live Website](https://dermomurphy.github.io/BrewPunk-CI/)
 
 Milestone 2 Project: Code Institute: BrewPunk-CI
+
+ 
+## Table of Contents
+1. [**Project overview**](#project-overview)
+2. [**UX**](#ux)
+  - [**Wireframe**](#wireframe)
+ 
+3. [**Features**](#features)
+   - [**Existing Features**](#existing-features)
+   - [**Features Left to Implement**](#features-left-to-implemement)
+ 
+4. [**Technologies Used**](#technologies-used)
+ 
+ 
+5. [**Testing**](#testing)
+  - [**Viewports/Responsiveness**](#viewports/responsivenes)
+  - [**Functional Testing**](#funtional-testing)
+ 
+7. [**Deployment**](#deployment)
+ 
+8. [**Credits**](#credits)
+  - [**Content**](#content)
+  - [**Media**](#media)
+  - [**Acknowledgements**](#acknowledgements)
+ 
+---
+## Project Overview
 
 A Site developed for MS2 Project in Code Institute. The site consists of 3 pages. Index/Brew Calculator/Contact.
 Developed for Homebrewers using the PunkAPI to search for Brewdog Homebrew recipes based on IBU and ABV.
@@ -14,6 +42,8 @@ Brewing calcuators for measuring alcohol content of your homebrew using the init
 A priming sugar calcuator based on brew volume and Temperature with recommended C02 Volumes given based on style of beer.
 
 A contact form for Contacting us using emailJS.
+
+
  
 ## UX
 
@@ -25,7 +55,7 @@ A contact form for Contacting us using emailJS.
 There is also a contact form available so they can either suggest a feature or enquire about services.
 - In the contact form the user can provide the First Name, Lastname, reply Email and write a message and send.
 
-
+### Wireframe
 Link to conceptual Wireframe:
 - 
 
@@ -126,7 +156,7 @@ Testing done on VSCode Using Live server.- Mobile responsiveness also tested liv
     4. Try to submit the form with all inputs valid and verify that a the form Success page message appears. email is sent to my personal email address.
  
 **Media Queries**
-Media Queries Break Screens smaller than 860px:
+Media Queries Break Screens smaller than 960px:
 - Main Page Header Text reduces in size on smaller screens
 - Materialize Framework handles many resizing of Rows and colums based on s/m factors chosen on page HTML.
 
