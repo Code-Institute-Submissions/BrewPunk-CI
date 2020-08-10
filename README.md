@@ -1,7 +1,8 @@
 # BrewPunk-CI
 MS2. Project Code Institute - Brewdog Homebrew Recipes + Homebrew Calculators 
-<img src="assets/img/amiResponsiveBrewPunk.png" style="margin: 0;">
 
+<img src="assets/img/amiResponsiveBrewPunk.png" style="margin: 0;">
+Link to live Website : https://dermomurphy.github.io/BrewPunk-CI/
 
 Milestone 2 Project: Code Institute: BrewPunk-CI
 
