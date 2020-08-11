@@ -57,7 +57,7 @@ There is also a contact form available so they can either suggest a feature or e
 
 ### Wireframe
 Link to conceptual Wireframe:
-- [Wireframe](./assets/UX/wireframe brewpunk.pdf)
+- [Wireframe](.https://github.com/Dermomurphy/BrewPunk-CI/blob/master/assets/UX/wireframe%20brewpunk.pdf)
 
 ## Features
 
