@@ -82,4 +82,11 @@ input[type=range] + .thumb.active .value {
         overflow-y: scroll;
     }
 
+    .main-heading {
+        font-size: 1.6em;
+    }
+    nav .sidenav-trigger {
+        margin: 0 3px;  /* nav on mobile reduce left-right margin to see logo*/
+    }
+
   }

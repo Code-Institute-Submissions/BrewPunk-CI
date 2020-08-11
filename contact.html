@@ -148,6 +148,8 @@
         <div class="parallax"><img src="assets/img/background2.jpg" alt="Unsplashed background img 2"></div>
     </div>
 
+    <a onclick="  M.toast({html: 'I am a toast!', classes: 'rounded red white-text'});" class="btn">Toast!</a>
+
     <footer class="page-footer deep-orange">
         <div class="container">
             <div class="row">
@@ -218,10 +220,9 @@
             var lname = document.forms["myform"]["last_name"].value;
             var email = document.forms["myform"]["reply_to"].value;
             var message = document.forms["myform"]["message_html"].value;
-            if (fname == "" || lname == "" || email == "" || message == "") {
-                alert("All fields must be filled out");
+            if (fname === "" || lname === "" || email === "" || message === "") {
+                M.toast({html: 'Please Fill out All Fields', classes: 'rounded red white-text'});
                 return false;
-
             }
         }
         // Email JS Script

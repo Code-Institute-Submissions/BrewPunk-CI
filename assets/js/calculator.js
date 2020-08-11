@@ -17,7 +17,7 @@ function resetABV() {
   document.getElementById("initialGravity").value = "";
   document.getElementById("finalGravity").value = "";
   document.getElementById("ABVResult").value = "";
-  alert('ABV Calculator Reset');
+  M.toast({html: 'ABV Calc Reset!', classes: 'rounded green white-text'});
 
 }
 // END -- ABV Calculation
@@ -66,8 +66,8 @@ function resetPrimingSugar() {
   document.getElementById("volumeCO2").value = "";
   document.getElementById("initialTemp").value = "";
   document.getElementById("sugarResult").value = "";
-  //document.getElementById("sugarSelect").value = "0";
-  alert('Priming Calculator Reset');
+  // Alert Success
+  M.toast({html: 'Priming Calc Reset!', classes: 'rounded green white-text'});
 
 }
 
