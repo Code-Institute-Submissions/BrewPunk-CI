@@ -161,7 +161,7 @@ Media Queries Break Screens smaller than 960px:
 - Materialize Framework handles many resizing of Rows and colums based on s/m factors chosen on page HTML.
 
 **Issues**
-- Current: Dropdown Menu of Beers not showing correctly on main page once content is fetched from API
+- Current: Priming sugar Calculator only calculates in imperial measurements currently.
 - Resolved: Banner text was impeded display download of DIYDOg recipeds pdf. Media Query added to reduce text size.
 
 
