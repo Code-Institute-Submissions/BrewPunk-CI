@@ -86,9 +86,8 @@ Link to conceptual Wireframe:
 
 - [Materialize](https://materializecss.com/about.html)
     - Built with Google Materialize framework. Created and designed by Google, Material Design is a design language that combines the classic principles of successful design along with innovation and technology. Google's goal is to develop a system of design that allows for a unified user experience across all their products on any platform.
-
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation as part of Bootstrap Twitter framework.
+![jQuery](https://img.shields.io/badge/jQuery-3.5.1-yellowgreen)
+ - [jQuery](https://jquery.com/) - is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation. The project uses **JQuery** to simplify DOM manipulation as part of Materialize framework.
 - [PUNK APi](https://punkapi.com/documentation/v2)  Main API  used to fetch Homebrew Recipe Data from DIY DOG based on Brewdog Recipes.
     - Root Endpoint
     The root endpoint should prefix all resources and is only accessible over HTTPS. CORS is also enabled.
@@ -103,19 +102,20 @@ Link to conceptual Wireframe:
     You can see what the rate limit is and how many requests are remaining by looking at the rate limit headers sent in the response.
 
 - [Visual Studio Code](https://code.visualstudio.com/): Programming code editor created by Microsoft.
-- ![Chrome Developer Tools](https://img.shields.io/badge/Chrome%20Dev%20Tools-Google%20Chrome-blue)
+![Chrome Developer Tools](https://img.shields.io/badge/Chrome%20Dev%20Tools-Google%20Chrome-blue)
  - [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) -  web developer tools built directly into the Google Chrome web browser.
-
-- ![GitHub](https://img.shields.io/badge/GitHub-Git%20repository%20hosting%20service-lightgrey)
+![Git](https://img.shields.io/badge/Git-----fast--version--control-orange)
+ - [Git](https://git-scm.com/) - open source distributed version control system.
+![GitHub](https://img.shields.io/badge/GitHub-Git%20repository%20hosting%20service-lightgrey)
 - [GitHub](https://github.com/) - Web-based hosting service for version control using Git.
 - [W3CMarkupValidation](https://validator.w3.org/) Tools to assess CSS and HTML validation.
 - [Metatags](https://metatags.io/) Generation of Meta tag content for social media sharing and SEO.
 - [GoogleFonts](https://fonts.google.com/) - font families from Google.
 - [Material Icons](https://material.io/resources/icons/?style=baseline) - Material Design ICONS.
 - [EmailJS](https://www.emailjs.com/) - Javascript library for sending of contact form Emails.
-- ![HTML5](https://img.shields.io/static/v1?label=HTML&message=5&color=E34F26&logo=html5&logoColor=ffffff)
+![HTML5](https://img.shields.io/static/v1?label=HTML&message=5&color=E34F26&logo=html5&logoColor=ffffff)
  - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - used for Hyper text markup language.
-- ![CSS3](https://img.shields.io/static/v1?label=CSS&message=3&color=1572B6&logo=css3&logoColor=ffffff)
+![CSS3](https://img.shields.io/static/v1?label=CSS&message=3&color=1572B6&logo=css3&logoColor=ffffff)
  - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used for cascading stylesheets.
 
 ## Testing
