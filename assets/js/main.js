@@ -39,3 +39,11 @@ function updateABVIBUButton() {
 
 // Do not display Selext Beer Buttoon until function called
 document.getElementById("selectButton").style.display = "none";
+
+// fixed action button initialise FAB Script
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.fixed-action-btn');
+      var instances = M.FloatingActionButton.init(elems, {
+        direction: 'top'
+      });
+    });

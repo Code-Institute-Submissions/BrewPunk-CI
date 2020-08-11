@@ -1,5 +1,5 @@
 var data;
-
+// get Alcohol by volume Beer Data
 async function getDataABV() {
   let ABVValue = document.getElementById("ABVSlider").value;
   // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
@@ -10,6 +10,7 @@ async function getDataABV() {
   return data;
 }
 
+// get Bitterness unit Beer Data
 async function getDataIBU() {
   let IBUValue = document.getElementById("IBUSlider").value;
   // sample API command  https://api.punkapi.com/v2/beers?page=2&per_page=80
@@ -20,6 +21,7 @@ async function getDataIBU() {
   return data;
 }
 
+// get Alcohol by volume  + Bitterness Unit Beer Data
 async function getDataABVIBU() {
   let IBUValue = document.getElementById("IBUSlider").value;
   let ABVValue = document.getElementById("ABVSlider").value;
@@ -118,7 +120,7 @@ function dropdownTemplate(beer){
   `
 }
 
-/// Main Beer Template Function to display cards on retrieval of DATA from Punk API //
+// Main Beer Template Function to display cards on retrieval of DATA from Punk API 
 
 function beerTemplate(beer) {
   return `
@@ -189,7 +191,7 @@ function beerTemplate(beer) {
 
 
 
-// TODO -- Creatmenu based off retrieval of DATa to select Beer
+//  Creatmenu based off retrieval of DATA to select Beer
 function createMenu(data) {
   document.getElementById("selectButton").style.display = "block";
   document.getElementById('dropdown1').innerHTML ="";
@@ -212,7 +214,7 @@ function createMenu(data) {
 
 
 
-/// GET Alcohol by Volume function call on Get REcipes by ABV button
+// GET Alcohol by Volume function call on Get REcipes by ABV button
 function getABV() {
   getDataABV().then((data) => {
     document.getElementById("root").innerHTML = `
@@ -223,7 +225,7 @@ function getABV() {
   });
 }
 
-/// GET Bitteness unit function call on Get REcipes by IBU button
+// GET Bitteness unit function call on Get REcipes by IBU button
 function getIBU() {
   getDataIBU().then((data) => {
     document.getElementById("root").innerHTML = `
@@ -234,7 +236,7 @@ function getIBU() {
   });
 }
 
-/// GET Bitteness + ABV  unit function call on Get REcipes by IBU and ABV button
+// GET Bitteness + ABV  unit function call on Get REcipes by IBU and ABV button
 function getABVIBU() {
   getDataABVIBU().then((data) => {
 
@@ -248,7 +250,7 @@ function getABVIBU() {
 
 
 
-// Load Random Beer on loading of Browser window ///
+// Load Random Beer on loading of Browser window 
 window.onload = function getRandom() {
   getDataRandom().then((data) => {
     document.getElementById("random").innerHTML = `
