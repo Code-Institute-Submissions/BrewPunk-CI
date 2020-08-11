@@ -103,13 +103,20 @@ Link to conceptual Wireframe:
     You can see what the rate limit is and how many requests are remaining by looking at the rate limit headers sent in the response.
 
 - [Visual Studio Code](https://code.visualstudio.com/): Programming code editor created by Microsoft.
+- ![Chrome Developer Tools](https://img.shields.io/badge/Chrome%20Dev%20Tools-Google%20Chrome-blue)
+ - [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) -  web developer tools built directly into the Google Chrome web browser.
 
-- [Github](https://github.) Hosting for software development version control using Git.
+- ![GitHub](https://img.shields.io/badge/GitHub-Git%20repository%20hosting%20service-lightgrey)
+- [GitHub](https://github.com/) - Web-based hosting service for version control using Git.
 - [W3CMarkupValidation](https://validator.w3.org/) Tools to assess CSS and HTML validation.
 - [Metatags](https://metatags.io/) Generation of Meta tag content for social media sharing and SEO.
 - [GoogleFonts](https://fonts.google.com/) - font families from Google.
 - [Material Icons](https://material.io/resources/icons/?style=baseline) - Material Design ICONS.
 - [EmailJS](https://www.emailjs.com/) - Javascript library for sending of contact form Emails.
+- ![HTML5](https://img.shields.io/static/v1?label=HTML&message=5&color=E34F26&logo=html5&logoColor=ffffff)
+ - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - used for Hyper text markup language.
+- ![CSS3](https://img.shields.io/static/v1?label=CSS&message=3&color=1572B6&logo=css3&logoColor=ffffff)
+ - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used for cascading stylesheets.
 
 ## Testing
 ### Viewports Responsiveness
