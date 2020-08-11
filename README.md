@@ -11,24 +11,24 @@ Milestone 2 Project: Code Institute: BrewPunk-CI
 ## Table of Contents
 1. [**Project overview**](#project-overview)
 2. [**UX**](#ux)
-  - [**Wireframe**](#wireframe)
+   - [**Wireframe**](#wireframe)
  
 3. [**Features**](#features)
-  - [**Existing Features**](#existing-features)
-  - [**Features Left to Implement**](#Features-Left-to-Implement)
+   - [**Existing Features**](#existing-features)
+   - [**Features Left to Implement**](#Features-Left-to-Implement)
  
 4. [**Technologies Used**](#technologies-used)
 
 5. [**Testing**](#testing)
-  - [**Viewports/Responsiveness**](#Viewports-Responsiveness)
-  - [**Functional Testing**](#funtional-testing)
+   - [**Viewports/Responsiveness**](#Viewports-Responsiveness)
+   - [**Functional Testing**](#funtional-testing)
  
 6. [**Deployment**](#deployment)
  
 7. [**Credits**](#credits)
-  - [**Content**](#content)
-  - [**Media**](#media)
-  - [**Acknowledgements**](#acknowledgements)
+   - [**Content**](#content)
+   - [**Media**](#media)
+   - [**Acknowledgements**](#acknowledgements)
  
 ---
 ## Project Overview
