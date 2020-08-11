@@ -54,13 +54,13 @@ function calcPrimingSugar() {
       factor = 1.1333;
   }
 
-  //PS = 15.195 * VB (cd  - 3.0378 + 5.0062 - 2.6555*10^-2 *T * 10^-4 *T^2)
+  //Formula used : PS = 15.195 * VB (cd  - 3.0378 + 5.0062 - 2.6555*10^-2 *T * 10^-4 *T^2)
   let ps = factor * (15.195 * vb * (cd - 3.0378 + 5.0062 * Math.pow(10, -2) * temp - 2.6555 * Math.pow(10, -4) * Math.pow(temp, 2)));
 
 
   document.getElementById("sugarResult").value = `Sugar Amount = ${ps.toFixed(2)} grams`;
 };
-//Reset Text Areas in PS Calculator:
+//Reset Text Areas in PS Calculator: Alert reset
 function resetPrimingSugar() {
   document.getElementById("initialAmount").value = "";
   document.getElementById("volumeCO2").value = "";
@@ -70,5 +70,4 @@ function resetPrimingSugar() {
   M.toast({html: 'Priming Calc Reset!', classes: 'rounded green white-text'});
 
 }
-
  // END -- Priming Sugar Calculation

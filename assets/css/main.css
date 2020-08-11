@@ -78,15 +78,20 @@ input[type=range] + .thumb.active .value {
         padding-bottom: 2px;
         margin-bottom: 2px;
         display: inline-block; /* make blocks inline-block */
-        height:3 00px;
+        height: 420px;
         overflow-y: scroll;
     }
 
-    .main-heading {
-        font-size: 1.6em;
-    }
     nav .sidenav-trigger {
         margin: 0 3px;  /* nav on mobile reduce left-right margin to see logo*/
     }
-
+    .main-heading {
+      font-size: medium;
+    }
+    .btn {
+        margin-bottom: 10px;
+    }
+    #logo-container2 {
+        font-size: 0.6em;
+    }
   }
