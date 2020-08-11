@@ -14,12 +14,11 @@ Milestone 2 Project: Code Institute: BrewPunk-CI
   - [**Wireframe**](#wireframe)
  
 3. [**Features**](#features)
-   - [**Existing Features**](#existing-features)
-   - [**Features Left to Implement**](#Features-Left-to-Implement)
+  - [**Existing Features**](#existing-features)
+  - [**Features Left to Implement**](#Features-Left-to-Implement)
  
 4. [**Technologies Used**](#technologies-used)
- 
- 
+
 5. [**Testing**](#testing)
   - [**Viewports/Responsiveness**](#Viewports-Responsiveness)
   - [**Functional Testing**](#funtional-testing)
